@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Security Research | PoC</title>
+
+  <style>
+    :root {
+      --bg: #080d18;
+      --panel: #101a2b;
+      --border: #263750;
+      --accent: #36d6c5;
+      --text: #e8eef8;
+      --muted: #91a2ba;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(ellipse at top, #142640, transparent 65%),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .topline {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: rgba(16, 26, 43, 0.96);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 24px 80px #0005;
+    }
+
+    .status {
+      display: inline-block;
+      color: var(--accent);
+      border: 1px solid #36d6c555;
+      background: #36d6c510;
+      border-radius: 5px;
+      padding: 7px 10px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      margin: 24px 0 14px;
+      letter-spacing: -1px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .description {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .details {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      background: #0a1220;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 16px;
+    }
+
+    .label {
+      display: block;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      overflow-wrap: anywhere;
+      font-size: 14px;
+      font-family: ui-monospace, monospace;
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 15px;
+      border-left: 3px solid var(--accent);
+      background: #36d6c509;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    footer {
+      color: #65758c;
+      text-align: center;
+      font-size: 11px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 520px) {
+      .card {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="topline">SECURITY RESEARCH / PoC</div>
+
+    <section class="card">
+      <span class="status">AUTHORIZED TEST ENVIRONMENT</span>
+
+      <h1>Subdomain Takeover<br><span>Proof of Concept</span></h1>
+
+      <p class="description">
+        This page is a demonstration for documenting a potential
+        subdomain misconfiguration during an authorized security
+        assessment. Its presence alone does not establish a
+        confirmed vulnerability.
+      </p>
+
+      <div class="details">
+        <div class="item">
+          <span class="label">Target Subdomain</span>
+          <div class="value">your-lab.example.com</div>
+        </div>
+
+        <div class="item">
+          <span class="label">DNS Record</span>
+          <div class="value">CNAME — replace with verified evidence</div>
+        </div>
+
+        <div class="item">
+          <span class="label">Affected Service</span>
+          <div class="value">Not yet verified</div>
+        </div>
+
+        <div class="item">
+          <span class="label">Assessment Status</span>
+          <div class="value">Demonstration only</div>
+        </div>
+      </div>
+
+      <div class="notice">
+        <strong>Research Notice</strong><br>
+        Use only on systems you own or are explicitly authorized
+        to test. No user data has been accessed or modified by
+        this demonstration page.
+      </div>
+    </section>
+
+    <footer>
+      Responsible Disclosure · Security Research · PoC
+    </footer>
+  </main>
+</body>
+</html>
